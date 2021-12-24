@@ -45,12 +45,11 @@ subjects:
 
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: local-path-provisioner
   namespace: local-path-storage
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: local-path-provisioner
